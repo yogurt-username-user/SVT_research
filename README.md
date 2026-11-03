@@ -18,12 +18,15 @@ This repository contains files need to run the simulations of traffic in Zurich 
      - `number`: Number that is used on folders, generated simulation files and output files to differentiate different scenarios.
      - `cooldownTime`: Cooldown duration in seconds
      - `red_min_duration_coefficient`: Minimum phase duration ratio
-     - `way`: Priority strategy, 3 options are available: `nopriority`, base case without priority implemented; `nspnc`: active priority logic, no compensation mechanism; `ǹspc`: active priority logic, with a compensation mechanism
+     - `way`: Priority strategy, 3 options are available:
+          - `nopriority`, base case without priority implemented
+          - `nspnc`: active priority logic, no compensation mechanism
+          - `ǹspc`: active priority logic, with a compensation mechanism
      - `mode`: Traffic signal schedule, either `fixed` or `actuated`
-     - `simulationTime`: In-simulation time until when to run the sim.ulation, full simulation time is until 39600
+     - `simulationTime`: In-simulation time until when to run the simulation, default value *39600*
      - `seed`: Random seed, used seeds: 23423, 23424, ....5, ....6, ....7
 4. After setting up the variables, run the main_1.py either in an IDE or terminal
 5. The simulation should be running :) 
 6. Two folders are generated, `simulations` containing folders for each separated run, containing modified files used for the simulation. `outputs` contains folders with outputs for each run.
-
+7. The `outputs` folder contains `variables_{number}.csv` which contains the variables used for the particular run.
 If you wish to run more simulations, make sure to change the variable `number` in the `config.py` file, otherwise your previous outputs and generated simulation files will be overwritten.
